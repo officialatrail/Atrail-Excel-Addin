@@ -1,0 +1,8 @@
+# Only the .xll and version.json should ever be committed.
+# This prevents any settings or keys from being accidentally pushed.
+*.json.bak
+settings.json
+*.pdb
+*.dll
+*.deps.json
+*.runtimeconfig.json
