@@ -1,7 +1,5 @@
 # Atrail AI for Excel
 
-> **Beta Software** — This is an early release. Features may change, bugs may exist. Always keep a backup of important workbooks before using AI to modify them.
-
 An AI assistant built into Excel. Ask it to sort, clean, analyse, build pivot tables, add formulas, and more — all in plain English.
 
 Supports **Anthropic Claude · OpenAI GPT · DeepSeek · xAI Grok · Gemini · OpenRouter**
@@ -12,7 +10,7 @@ Supports **Anthropic Claude · OpenAI GPT · DeepSeek · xAI Grok · Gemini · O
 
 - Windows 10 or 11
 - Excel 2016 or later (64-bit recommended)
-- [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) (free, one-time install)
+- [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) — free, ~25 MB from Microsoft
 - An API key from at least one AI provider
 
 ---
@@ -20,7 +18,7 @@ Supports **Anthropic Claude · OpenAI GPT · DeepSeek · xAI Grok · Gemini · O
 ## Installation
 
 1. Download **Atrail Excel Addin.xll** from this page
-2. Install the [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) if you have not already (free download from Microsoft, one-time only)
+2. Install [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) if you have not already
 3. Open Excel
 4. Go to **File > Options > Add-ins**
 5. At the bottom, set "Manage" to **Excel Add-ins** and click **Go**
@@ -72,11 +70,9 @@ For destructive actions (deleting rows, clearing data) the AI asks for your appr
 
 ## Privacy
 
-Your spreadsheet data is sent to the AI provider you selected to process your request. Atrail itself never sees or stores it.
+Your spreadsheet data is sent to the AI provider you selected to process your request. It is not stored by Atrail. Review your chosen provider's privacy policy before using confidential data.
 
-Your API key is encrypted using Windows built-in security (DPAPI) and stored only on your computer, tied to your Windows user account. It is never sent to Atrail, never written to a plain text file, and is masked on screen so it cannot be seen by others. Atrail has no server, no account system, and no usage tracking of any kind.
-
-Review your chosen provider's privacy policy before using confidential data.
+API keys are encrypted on your machine and never leave it.
 
 ---
 
@@ -90,7 +86,7 @@ To update: download the new `.xll` and repeat the installation steps (Excel will
 
 ## Troubleshooting
 
-**Add-in did not load** — Make sure you are using 64-bit Excel on Windows 10 or 11.
+**Add-in did not load** — Install [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0).
 
 **"No API key" warning** — Open **... > Settings** and add your key.
 
@@ -102,16 +98,5 @@ To update: download the new `.xll` and repeat the installation steps (Excel will
 
 ## Support
 
-GitHub: https://github.com/officialatrail/Atrail-Excel-Addin
-
----
-
-## Disclaimer
-
-Atrail AI is beta software, provided as is. It works well for most tasks but is still in testing and may not always give perfect results. Please review any changes the AI makes to your spreadsheet before relying on them.
-
-- **AI output:** The AI is powered by third-party models. Atrail cannot guarantee that every formula, edit, or suggestion will be correct. Always check the results.
-- **Your data goes to your AI provider:** When you ask a question, the relevant parts of your spreadsheet are sent to the AI provider you configured. By using this add-in you agree to that provider's own terms and privacy policy. Atrail has no control over how they handle your data.
-- **API costs:** Any charges from your AI provider are billed directly to you. Atrail does not charge for the add-in and is not responsible for third-party billing.
-- **No affiliation:** Atrail AI is an independent product, not made by or affiliated with Microsoft Corporation.
-- **Liability:** To the extent allowed by law, Atrail accepts no liability for data loss, errors in AI output, or any other damage arising from use of this software.
+GitHub: https://github.com/officialatrail/Atrail-Excel-Addin  
+Website: https://atrail.io
