@@ -12,21 +12,21 @@ Supports **Anthropic Claude · OpenAI GPT · DeepSeek · xAI Grok · Gemini · O
 
 - Windows 10 or 11
 - Excel 2016 or later (64-bit recommended)
+- [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) (free, one-time install)
 - An API key from at least one AI provider
-
-No additional software needs to be installed. The .NET runtime is bundled inside the add-in.
 
 ---
 
 ## Installation
 
 1. Download **Atrail Excel Addin.xll** from this page
-2. Open Excel
-3. Go to **File > Options > Add-ins**
-4. At the bottom, set "Manage" to **Excel Add-ins** and click **Go**
-5. Click **Browse**, select the `.xll` file, click **OK**
-6. Tick the checkbox next to **Atrail AI**, click **OK**
-7. The Atrail panel opens on the right side of Excel
+2. Install the [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) if you have not already (free download from Microsoft, one-time only)
+3. Open Excel
+4. Go to **File > Options > Add-ins**
+5. At the bottom, set "Manage" to **Excel Add-ins** and click **Go**
+6. Click **Browse**, select the `.xll` file, click **OK**
+7. Tick the checkbox next to **Atrail AI**, click **OK**
+8. The Atrail panel opens on the right side of Excel
 
 > To reopen the panel later: **Add-ins tab > Atrail AI**
 
