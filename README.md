@@ -4,26 +4,39 @@ An AI assistant built directly into Excel. Ask it to sort, clean, analyse, build
 
 Supports **Anthropic Claude · OpenAI GPT · DeepSeek · xAI Grok · Gemini · OpenRouter**
 
+**BYOK — Bring Your Own Key.** Connect any AI provider using your own API key. No Atrail subscription required.
+
 ---
 
 ## Requirements
 
 - Windows 10 or 11
 - Excel 2016 or later (64-bit)
-- [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) — free, one-time install from Microsoft (~25 MB)
+
+No additional software or runtime needed — the XLL file is fully standalone.
 
 ---
 
 ## Installation
 
-1. Install [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) if you have not already
-2. Download **Atrail Excel Addin.xll** from this page
-3. Open Excel → **File → Options → Add-ins**
-4. Set "Manage" to **Excel Add-ins** and click **Go**
-5. Click **Browse**, select the `.xll` file, click **OK**
-6. Tick the checkbox next to **Atrail AI** and click **OK**
+### Quick try (single session)
 
-> To reopen the panel later: **Add-ins tab → Atrail AI**
+1. Download **Atrail Excel Addin.xll** from this page
+2. Double-click the file — Excel opens and shows a security prompt
+3. Click **Enable for this session only**
+4. The **Atrail** tab appears in your ribbon — done
+
+> The add-in will not reload automatically next time you open Excel. Use the steps below for a permanent install.
+
+### Permanent install (loads every time Excel opens)
+
+1. Download **Atrail Excel Addin.xll** and save it somewhere you will not move it
+2. In Excel go to **File → Options → Add-ins**
+3. Set "Manage" to **Excel Add-ins** and click **Go**
+4. Click **Browse**, select the `.xll` file, click **OK**
+5. Tick the checkbox next to **Atrail AI** and click **OK**
+
+> To reopen the panel after it is installed: **Atrail tab in the ribbon → Atrail AI**
 
 ---
 
@@ -42,7 +55,9 @@ OpenRouter lets you access many AI models with one login — no API key to copy 
 Free models (no credits needed): Llama 4, Qwen 3, DeepSeek R1, Gemini Flash, and more.  
 Paid models: Claude, GPT-4, Gemini Pro, Grok — charged to your OpenRouter balance.
 
-### Option B — Direct API key
+### Option B — Direct API key (BYOK)
+
+Paste your own key from any provider directly into the add-in. Your key stays on your machine — it is never sent to Atrail.
 
 | Provider | Sign up | Notes |
 |---|---|---|
@@ -97,21 +112,19 @@ API keys are encrypted on your machine using Windows DPAPI and never leave it.
 
 ## Updates
 
-The add-in checks for updates automatically. A banner appears when a new version is available — click it to download. To check manually: **⋯ → Check for updates**.
-
-To update: download the new `.xll`, open Excel Add-ins, and browse to replace the old file.
+The add-in checks for updates automatically. When a new version is available a banner appears in the panel — click it to update. To check manually: **⋯ → Check for updates**.
 
 ---
 
 ## Troubleshooting
 
-**Add-in did not load** — Install [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) and restart Excel.
-
 **"No API key" message** — Open **⋯ → Settings** and add your key or connect OpenRouter.
 
 **HTTP 401 error** — Your key is invalid or expired. Disconnect and reconnect OpenRouter, or check the key in your provider's dashboard.
 
-**Panel does not open** — Go to the **Add-ins** tab in Excel's ribbon and click **Atrail AI**.
+**Panel does not open** — Click the **Atrail AI** button in the **Atrail** tab in Excel's ribbon.
+
+**Add-in not loading on startup** — Make sure you used the permanent install steps above, not the double-click method.
 
 **White or invisible text** — Open **⋯ → Settings**, switch Theme to Dark, save, then switch back.
 
